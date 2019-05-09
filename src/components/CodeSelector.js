@@ -6,7 +6,7 @@ const requestIp = require('request-ip');
 
 class Ip extends React.Component {
   state = {
-    ip: '8.8.8.8'
+    ip: ''
   };
 
   handleClick = (e) => {
