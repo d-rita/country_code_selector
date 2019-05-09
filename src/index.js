@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/CodeSelector';
+import { BrowserRouter } from 'react-router-dom';
+import App from './components/App';
 
 
 // Link apollo client to react
 ReactDOM.render(
-        <App />,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );

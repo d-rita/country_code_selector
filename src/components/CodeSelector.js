@@ -10,6 +10,7 @@ class Ip extends React.Component {
   };
 
   handleClick = (e) => {
+    // console.log('help out');
     e.preventDefault();
     const ipMiddleware = (req, res, next) => {
       const clientIp = requestIp.getClientIp(req);
