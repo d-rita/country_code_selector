@@ -6,13 +6,14 @@ const requestIp = require('request-ip');
 
 class Ip extends React.Component {
   state = {
-    ip: '8.8.8.8'
+    ip: ''
   };
 
   handleClick = (e) => {
     e.preventDefault();
     const ipMiddleware = (req, res, next) => {
       const clientIp = requestIp.getClientIp(req);
+      console.log(clientIp);
       this.setState({ ip: clientIp });
       next();
     };
